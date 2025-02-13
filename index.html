@@ -7,11 +7,12 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-             background: url('https://png.pngtree.com/background/20210709/original/pngtree-cartoon-pink-rose-flower-background-material-picture-image_919233.jpg') no-repeat center center;
+            background: url('https://img.stablecog.com/insecure/1920w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vMzZkYjAwMzQtOWI4YS00OTRjLTllMmMtZDZhMjVmODlmZGVlLmpwZWc.webp') no-repeat center center;
             height: 100vh;
-            background-color: #f0f8ff;
+            background-size: cover;
             margin: 0;
         }
         .flower-container {
@@ -32,11 +33,29 @@
                 transform: rotate(360deg);
             }
         }
+        .card {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
     </style>
+    <script>
+        function showMessage() {
+            alert('Hello! This is your message.');
+        }
+    </script>
 </head>
 <body>
     <div class="flower-container">
-        <img src="https://gdflowerscm.com/cdn/shop/products/image_7122bf7d-aede-4dce-8cc2-433aeb3ae480.webp?v=1669009494" alt="Spinning Flower" class="flower">
+        <img src="https://gdflowerscm.com/cdn/shop/products/image_7122bf7d-aede-4dce-8cc2-433aeb3ae480.webp?v=1669009494" class="flower">
     </div>
+    <div class="card" onclick="showMessage()">Click me for a message</div>
 </body>
 </html>
